@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./dist/style.css">
+  <title>Greatpro Test Task</title>
+</head>
+<div class="app">
+  <div class="banner">
+    <span class="current-plan">Pricing Plan</span>
+  </div>
+
+  <div class="container">
+    <h1 class="main-title">Choose the right plan!</h1>
+    <div class="switch-wrapper">
+      <input id="monthly" type="radio" name="switch">
+      <input id="yearly" type="radio" name="switch">
+      <label for="monthly">Monthly</label>
+      <label for="yearly">Yearly</label>
+      <span class="highlighter"></span>
+    </div>
+
+
+
+    <div class="cards">
+
+      <div class="card" id="basic">
+        <h1 class="title">Basic</h1>
+        <h3 class="price" id="basic-price"><span class="amount">$9.99</span> / month </h3>
+        <ul class="plan">
+          <li><span class="enabled">✔</span>Cloud Storage</li>
+          <li><span class="enabled">✔</span>Email Support</li>
+          <li><span class="enabled">✔</span>Mobile App</li>
+          <li><span class="disabled">✘</span>File Sharing</li>
+          <li><span class="disabled">✘</span>Advanced Security</li>
+        </ul>
+        <button type="button" class="btn">Sign Up</button>
+      </div>
+
+
+      <div class="card active" id="standard">
+        <h1 class="title">Standard</h1>
+        <h3 class="price" id="standart-price"><span class="amount">$14.99</span> / month</h3>
+
+        <ul class="plan">
+          <li><span class="enabled">✔</span>Cloud Storage</li>
+          <li><span class="enabled">✔</span>Email Support</li>
+          <li><span class="enabled">✔</span>Mobile App</li>
+          <li><span class="enabled">✔</span>File Sharing</li>
+          <li><span class="disabled">✘</span>Advanced Security</li>
+        </ul>
+        <button type="button" class="btn">Sign Up</button>
+      </div>
+
+      <div class="card" id="premium">
+        <h1 class="title">Premium</h1>
+        <h3 class="price" id="premium-price"></h3>
+
+        <ul class="plan">
+          <li><span class="enabled">✔</span>Cloud Storage</li>
+          <li><span class="enabled">✔</span>Email Support</li>
+          <li><span class="enabled">✔</span>Mobile App</li>
+          <li><span class="enabled">✔</span>File Sharing</li>
+          <li><span class="enabled">✔</span>Advanced Security</li>
+        </ul>
+        <button type="button" class="btn">Sign Up</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<script src="./js/script.js"></script>
+
+</html>

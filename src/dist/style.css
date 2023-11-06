@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: default; }
+  *::-webkit-scrollbar {
+    width: 8px; }
+  *::-webkit-scrollbar-track {
+    background: transparent; }
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #191919;
+  color: #fcfcfc;
+  height: 100vh;
+  width: 100%; }
+
+ol,
+ul {
+  list-style: none;
+  padding: 0; }
+
+.hide {
+  display: none; }
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 24px 64px; }
+
+.banner {
+  background-color: #00cbff;
+  padding: 24px;
+  border-radius: 0 0 6px 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.container {
+  margin-top: 64px;
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .container .main-title {
+    text-align: center; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: center;
+  justify-items: center;
+  gap: 24px;
+  width: 100%; }
+  @media (min-width: 648px) {
+    .cards {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 992px) {
+    .cards {
+      grid-template-columns: repeat(3, 1fr); } }
+  .cards .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #222222;
+    border-radius: 16px;
+    padding: 24px;
+    width: 100%; }
+    .cards .card .title {
+      margin-bottom: 12px;
+      text-align: center;
+      letter-spacing: 2px; }
+    .cards .card .price {
+      letter-spacing: 1px; }
+    .cards .card .plan {
+      align-self: flex-start;
+      margin-top: 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400; }
+      .cards .card .plan .enabled,
+      .cards .card .plan .disabled {
+        margin-right: 8px; }
+      .cards .card .plan .enabled {
+        color: #15bc3f; }
+      .cards .card .plan .disabled {
+        color: #dc3636; }
+    .cards .card .amount {
+      color: #00cbff;
+      font-size: 32px; }
+    .cards .card .btn {
+      margin-top: 48px;
+      border: 2px solid #00cbff;
+      border-radius: 8px;
+      padding: 16px 32px;
+      background-color: transparent;
+      color: #fcfcfc; }
+      .cards .card .btn:hover {
+        cursor: pointer;
+        background-color: #00cbff; }
+
+.switch-wrapper {
+  text-align: center;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border: 1px solid #fcfcfc;
+  margin: 30px auto 40px;
+  border-radius: 30px; }
+  .switch-wrapper label {
+    color: #fcfcfc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    z-index: 1;
+    min-width: 100px;
+    padding: 8px 12px;
+    border-radius: 30px;
+    transition: color 0.25s ease-in-out;
+    cursor: pointer; }
+    .switch-wrapper label:hover {
+      color: #00cbff; }
+  .switch-wrapper .highlighter {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: calc(50% - 4px);
+    height: calc(100% - 8px);
+    border-radius: 30px;
+    background: #00cbff;
+    transition: transform 0.25s ease-in-out; }
+  .switch-wrapper [type="radio"] {
+    display: none; }
+    .switch-wrapper [type="radio"]:checked#monthly ~ label[for="monthly"]:hover,
+    .switch-wrapper [type="radio"]:checked#yearly ~ label[for="yearly"]:hover {
+      background: transparent;
+      cursor: default;
+      color: #fcfcfc; }
+    .switch-wrapper [type="radio"]:checked#monthly + label[for="yearly"] ~ .highlighter {
+      transform: none; }
+    .switch-wrapper [type="radio"]:checked#yearly + label[for="monthly"] ~ .highlighter {
+      transform: translateX(100%); }
