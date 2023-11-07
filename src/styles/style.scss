@@ -78,6 +78,7 @@
       .enabled,
       .disabled {
         margin-right: 8px;
+        width: 18px;
       }
 
       .enabled {
@@ -158,7 +159,7 @@
     &:checked#yearly ~ label[for="yearly"]:hover {
       background: transparent;
       cursor: default;
-      color: $white-color
+      color: $white-color;
     }
 
     &:checked#monthly + label[for="yearly"] ~ .highlighter {
